@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>O Github sofreu o maior ataque DDOS já registrado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../asset/bower_components/1k/dist/1k.min.css">
+    <link rel="stylesheet" href="../../asset/css/main.css">
+    <link rel="stylesheet" href="../../asset/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+    <script src="../../asset/js/jquery1.4.min.js"></script>
+    <script src="../../asset/js/main.js"></script>
+    <script type="text/javascript" src="../../asset/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="../../feed/index.html" />
+    <meta property="og:site_name" content="Hacker Gaucho">
+    <meta property="og:title" content="O Github sofreu o maior ataque DDOS já registrado">
+    <link rel="apple-touch-icon" href="../../file/logo180.png" sizes="180x180">
+    <link rel="icon" href="../../file/logo32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../../file/logo16.png" sizes="16x16" type="image/png">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta name="twitter:title" content="O Github sofreu o maior ataque DDOS já registrado" />
+    <meta property="fb:admins" content="100009221931867"/>
+    <meta property="og:url" content="https://hackergaucho.com.br/posts/O_Github_sofreu_o_maior_ataque_DDOS_já_registrado/30">
+    <meta property="og:description" content="O Github sofreu o maior ataque DDOS registrado até agora, com picos de 1,35 Tbps">
+    <meta name="twitter:description" content="O Github sofreu o maior ataque DDOS registrado até agora, com picos de 1,35 Tbps" />
+    <meta property="og:image" content="https://hackergaucho.com.br/images/cover/github-ddos.png">
+    <meta name="twitter:image" content="https://hackergaucho.com.br/images/cover/github-ddos.png" />
+</head>
+<body>
+    <div class="c">
+        <div class="r">
+            <div class="g12 center">
+                <a href="../../index.html"><h1>Hacker Gaucho</h1></a>
+            </div>
+        </div>
+        <div class="r">
+            <div class="g3 center">
+                <p><small class="hamburguer">
+                    &#x2630; Menu
+                </small></p>
+                <script>
+                var hide=true;
+                function showMenu(){
+                    if(hide){
+                        hide=false;
+                        $('.hamburguer').html('X Menu');
+                    }else{
+                        hide=true;
+                        $('.hamburguer').html('&#x2630; Menu');
+                    }
+                    $('#menuPrincipal').toggle();
+                }
+                $('.hamburguer').click(function(){
+                    if($( document ).width()<1024){
+                        showMenu();
+                    }
+                });
+                </script>
+                <ul id="menuPrincipal" class="lista">
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="../../feed.1">RSS</a></li>
+                    <li><a href="../O_satélite_GOES-13_encerra_suas_transmissões/4%3Fupdate.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="g6"><p><small>01/Mar/2018 21:14:26</small></p>
+<h2>O Github sofreu o maior ataque DDOS já registrado</h2>
+<div class="content" id="post">
+<div class="center">    <a href="../../images/cover/github-ddos.png" title="Ver o original">        <img src="../../images/560/github-ddos.png" alt="github-ddos.png">    </a><br>    <small>DDOS de 1.35 Tbps</small></div>Um ataque DDOS (negação de serviço) é a maneira mais simples e mais grosseira de tirar do ar um servidor e todos os serviços que ele oferece, como um site por exemplo. Consiste em "afogar" o sistema, fazendo uma quantidade absurda de pedidos para o servidor, de forma que não seja capaz de responder aos pedidos legítimos.<br><br>Se você não tem proteção adequada, um ataque DDOS geralmente termina com o servidor caindo; para o usuário, isso resulta em páginas fora do ar ou serviços inacessíveis. Por outro lado, se você é o Github, você aparentemente é capaz de suportar tudo o que vier quase sem se abalar.<br><h3>O maior ataque DDOS registrado ocorreu sem afetar os usuários</h3>Aconteceu na última quarta-feira, 28 de fevereiro, às 1h15m no horário de Brasília; Naquele momento, alguns usuários começaram a notar que o Github estava ficando um pouco lento. Às vezes, era inacessível, pouco a pouco a situação melhorava e em poucos minutos a rede voltou ao normal.<br><br>Parecia um problema temporário do servidor, e a maioria não deu importância, pois é algo que costuma acontecer na Internet. O que ninguém sabia naquele momento acontecia a maior batalha contra um DDOS que já tivemos notícia.<br><br>O ataque veio de repente, e inicialmente os servidores tiveram problemas para se manterem de pé. Dez minutos depois, a situação era crítica e o serviço de mitigação DDOS, Akamai Prolexic foi acionado automaticamente.<br><br>Este serviço funciona como um intermediário, recebendo todo o tráfego direcionado aos servidores Github, analisando e depurando; é capaz de detectar pacotes maliciosos, que visam apenas deixar o servidor lento e detê-los. Desta forma, apenas as conexões de usuários legítimos devem chegar; é graças a isso que a web e o serviço permaneceram acessíveis, embora ainda com dificuldades.<br><h3>1,35 Tbps, um ataque devastador</h3>Oito longos minutos depois, os atacantes perceberam que estavam batendo contra um muro e desapareceram tão rapidamente quanto apareceram.<br><br>Nos momentos mais difíceis, os servidores não receberam menos de 1.35 terabits por segundo; essa é uma transferência de no menos de 125 GB por segundo, algo que estouraria qualquer conexão.<br><br>Na Akamai eles presumem que seu sistema foi projetado para suportar ataques cinco vezes maiores, e eles estavam confiantes de aguentarem 1.3 Tb; No entanto, eles também confessam que nunca receberam 1,5 Tbps. É uma coisa ter confiança, e outra que tudo vai acontecer como você gostaria.<br><h3>O novo tipo de ataque DDOS que permite transferências nunca vistas</h3>Um detalhe interessante do ataque é que os atacantes conseguiram um golpe semelhante sem ter que controlar uma botnet; normalmente os atacantes usam computadores "zumbis", infectados com malware, que fazem conexões com o servidor da vítima quando são acionados.<div class="center">    <a href="../../images/cover/memcached-shodan.png" title="Ver o original">        <img src="../../images/560/memcached-shodan.png" alt="memcached-shodan.png">    </a><br>    <small>Busca por memcached no Shodan</small></div>Em vez disso, esse ataque usa servidores "memcached", sistemas de cache distribuídos que são utilizados internamente por empresas e instituições, e que não devem ser acessados ​​pela Internet. No entanto, estima-se que aproximadamente 100.000 desses servidores estão mal configurados e os invasores podem aproveitá-los pela Internet.<div class="center">    <a href="../../images/cover/spoofing-1.png" title="Ver o original">        <img src="../../images/560/spoofing-1.png" alt="spoofing-1.png">    </a><br>    <small>Ataque DDOS usando memcached</small></div>O <a href="https://blog.cloudflare.com/memcrashed-major-amplification-attacks-from-port-11211/">método é muito simples</a>: eles enviam uma solicitação ao servidor memcached com o endereço IP da vítima, e o servidor responde automaticamente a esse endereço IP. Como esses servidores são mais poderosos e usam redes melhores do que um computador zumbi, esses ataques podem ser devastadores. É apenas um dos novos desafios que enfrentam empresas como a Akamai.<h3>Fontes:</h3><ul><li><a href="https://blog.cloudflare.com/memcrashed-major-amplification-attacks-from-port-11211/">Cloudflare</a><br></li><li><a href="https://githubengineering.com/ddos-incident-report/">Github Engineering</a><br></li><li><a href="https://omicrono.elespanol.com/2018/03/mayor-ataque-ddos/">Omicrono</a></li><li><a href="https://www.shodan.io/">Shodan</a><br></li></ul>
+<p class="right"><small>01/Mar/2018 21:14:26</small></p>
+</div>
+<script>
+$( document ).ready(function() {
+    $("a.group").fancybox({
+        'cyclic'    :   true,
+        'titleShow' :   true
+    });
+});
+</script>
+</div>        </div>
+        <div class="r">
+            <div class="g12 center">
+                <small>O código fonte deste blog está no <a href="https://github.com/hackergaucho/blog">Github</a></small>
+            </div>
+        </div>
+    </div><!--.c-->
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Quais as diferenças entre o Protocolo TCP e UDP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../asset/bower_components/1k/dist/1k.min.css">
+    <link rel="stylesheet" href="../../asset/css/main.css">
+    <link rel="stylesheet" href="../../asset/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+    <script src="../../asset/js/jquery1.4.min.js"></script>
+    <script src="../../asset/js/main.js"></script>
+    <script type="text/javascript" src="../../asset/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="../../feed/index.html" />
+    <meta property="og:site_name" content="Hacker Gaucho">
+    <meta property="og:title" content="Quais as diferenças entre o Protocolo TCP e UDP">
+    <link rel="apple-touch-icon" href="../../file/logo180.png" sizes="180x180">
+    <link rel="icon" href="../../file/logo32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../../file/logo16.png" sizes="16x16" type="image/png">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta name="twitter:title" content="Quais as diferenças entre o Protocolo TCP e UDP" />
+    <meta property="fb:admins" content="100009221931867"/>
+    <meta property="og:url" content="https://hackergaucho.com.br/posts/Quais_as_diferenças_entre_o_Protocolo_TCP_e_UDP/24">
+    <meta property="og:description" content="Certamente que já ouviram falar em serviços/aplicações que usam como protocolo de transporte o protocolo TCP ou o UDP. Quais as diferenças?">
+    <meta name="twitter:description" content="Certamente que já ouviram falar em serviços/aplicações que usam como protocolo de transporte o protocolo TCP ou o UDP. Quais as diferenças?" />
+    <meta property="og:image" content="https://hackergaucho.com.br/images/cover/redes.jpg">
+    <meta name="twitter:image" content="https://hackergaucho.com.br/images/cover/redes.jpg" />
+</head>
+<body>
+    <div class="c">
+        <div class="r">
+            <div class="g12 center">
+                <a href="../../index.html"><h1>Hacker Gaucho</h1></a>
+            </div>
+        </div>
+        <div class="r">
+            <div class="g3 center">
+                <p><small class="hamburguer">
+                    &#x2630; Menu
+                </small></p>
+                <script>
+                var hide=true;
+                function showMenu(){
+                    if(hide){
+                        hide=false;
+                        $('.hamburguer').html('X Menu');
+                    }else{
+                        hide=true;
+                        $('.hamburguer').html('&#x2630; Menu');
+                    }
+                    $('#menuPrincipal').toggle();
+                }
+                $('.hamburguer').click(function(){
+                    if($( document ).width()<1024){
+                        showMenu();
+                    }
+                });
+                </script>
+                <ul id="menuPrincipal" class="lista">
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="../../feed.1">RSS</a></li>
+                    <li><a href="../O_satélite_GOES-13_encerra_suas_transmissões/4%3Fupdate.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="g6"><p><small>19/Fev/2018 15:50:08</small></p>
+<h2>Quais as diferenças entre o Protocolo TCP e UDP</h2>
+<div class="content" id="post">
+Certamente que já ouviram falar em serviços/aplicações que usam como protocolo de transporte TCP ( Transmission Control Protocol) ou o UDP (User Datagram Protocol ).<br><br>Numa referência ao modelo OSI, estes protocolos pertencem à camada 4 (camada de transporte). Já no modelo TCP/IP, estes protocolos encontra-se igualmente na camada de transporte mas que corresponde à camada 3.<div align="center"><a href="../../images/cover/TCP_OSI-3.jpg" title="Ver o original">        <img src="../../images/400/TCP_OSI-3.jpg" alt="TCP_OSI-3.jpg">    </a></div>Numa máquina existem (teoricamente) 65.536 portas lógicos TCP que podem ser usados pelas mais diversas aplicações/serviços, o que (teoricamente) poderíamos ter 65.536 aplicações/serviços distintos a correr em simultâneo na nossa máquina. O endereço IP identifica a máquina e a porta lógica identifica a aplicação/serviço. Além dos portas TCP temos também 65.536 portas UDP (teoricamente).<br><h2>Protocolo TCP VS Protocolo UDP</h2><h3>TCP</h3><p>O TCP é o protocolo mais usado isto porque fornece garantia na entrega de todos os pacotes entre um PC emissor e um PC recetor. No estabelecimento de ligação entre emissor e recetor existe um “pré-acordo” denominado de Three Way Handshake (SYN, SYN-ACK, ACK).</p><ul><li>A sessão entre um cliente e um servidor é sempre iniciada pelo cliente, que envia um pedido de ligação pacote com a flag SYN ativada;</li><li>O cliente envia também um número sequencial aleatório;</li><li>O servidor responde com um pacote SYN-ACK com o seu próprio número sequencial aleatório e um número de confirmação (igual ao número sequencial do cliente +1);</li><li>Para finalizar o cliente responde com um pacote ACK com o número de confirmação (igual ao número de sequência do servidor +1).</li></ul><div align="center"> <a href="../../images/cover/way_02_thumb.jpg" title="Ver o original">        <img src="../../images/400/way_02_thumb.jpg" alt="way_02_thumb.jpg">    </a></div><h3>UDP</h3><p>O UDP é um protocolo mais simples e por si só não fornece garantia na entrega dos pacotes. No entanto, esse processo de garantia de dados pode ser simplesmente realizado pela aplicação em si (que usa o protocolo UDP) e não pelo protocolo. Basicamente, usando o protocolo UDP, uma máquina emissora envia uma determinada informação e a máquina receptora recebe essa informação, não existindo qualquer confirmação dos pacotes recebidos. Se um pacote se perder não existe normalmente solicitação de reenvio, simplesmente deixa de existir para o destinatário.</p><h3>Quais as unidades nesta camada?<br></h3><p>Erradamente é normal chamar-se “pacotes” a tudo. O pacote é a unidade (PDU – Protocol Data unit) da camada 3 do modelo OSI, que corresponde à camada de rede. No caso do modelo TCP/IP, corresponde à camada 2.<br><br>Quando falamos na camada de transporte, usamos segmento para designar a unidade quando usamos o protocolo TCP ou datagrama quando fazemos uso do protocolo UDP.</p><h3>Fonte:</h3><ul><li><a href="https://pplware.sapo.pt/tutoriais/redes-quais-diferencas-protocolo-tcp-udp/">Pplware</a><br></li></ul>
+<p class="right"><small>19/Fev/2018 15:50:08</small></p>
+</div>
+<script>
+$( document ).ready(function() {
+    $("a.group").fancybox({
+        'cyclic'    :   true,
+        'titleShow' :   true
+    });
+});
+</script>
+</div>        </div>
+        <div class="r">
+            <div class="g12 center">
+                <small>O código fonte deste blog está no <a href="https://github.com/hackergaucho/blog">Github</a></small>
+            </div>
+        </div>
+    </div><!--.c-->
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Conheça as novidades do HTML 5.2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../asset/bower_components/1k/dist/1k.min.css">
+    <link rel="stylesheet" href="../../asset/css/main.css">
+    <link rel="stylesheet" href="../../asset/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+    <script src="../../asset/js/jquery1.4.min.js"></script>
+    <script src="../../asset/js/main.js"></script>
+    <script type="text/javascript" src="../../asset/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="../../feed/index.html" />
+    <meta property="og:site_name" content="Hacker Gaucho">
+    <meta property="og:title" content="Conheça as novidades do HTML 5.2">
+    <link rel="apple-touch-icon" href="../../file/logo180.png" sizes="180x180">
+    <link rel="icon" href="../../file/logo32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../../file/logo16.png" sizes="16x16" type="image/png">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta name="twitter:title" content="Conheça as novidades do HTML 5.2" />
+    <meta property="fb:admins" content="100009221931867"/>
+    <meta property="og:url" content="https://hackergaucho.com.br/posts/Conheça_as_novidades_do_HTML_5.2/23">
+    <meta property="og:description" content="O HTML 5.2 já tornou-se uma recomendação oficial W3C (REC), saiba mais sobre o que mudou">
+    <meta name="twitter:description" content="O HTML 5.2 já tornou-se uma recomendação oficial W3C (REC), saiba mais sobre o que mudou" />
+    <meta property="og:image" content="https://hackergaucho.com.br/images/cover/HTML-5.2.jpg">
+    <meta name="twitter:image" content="https://hackergaucho.com.br/images/cover/HTML-5.2.jpg" />
+</head>
+<body>
+    <div class="c">
+        <div class="r">
+            <div class="g12 center">
+                <a href="../../index.html"><h1>Hacker Gaucho</h1></a>
+            </div>
+        </div>
+        <div class="r">
+            <div class="g3 center">
+                <p><small class="hamburguer">
+                    &#x2630; Menu
+                </small></p>
+                <script>
+                var hide=true;
+                function showMenu(){
+                    if(hide){
+                        hide=false;
+                        $('.hamburguer').html('X Menu');
+                    }else{
+                        hide=true;
+                        $('.hamburguer').html('&#x2630; Menu');
+                    }
+                    $('#menuPrincipal').toggle();
+                }
+                $('.hamburguer').click(function(){
+                    if($( document ).width()<1024){
+                        showMenu();
+                    }
+                });
+                </script>
+                <ul id="menuPrincipal" class="lista">
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="../../feed.1">RSS</a></li>
+                    <li><a href="../O_satélite_GOES-13_encerra_suas_transmissões/4%3Fupdate.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="g6"><p><small>17/Fev/2018 15:48:38</small></p>
+<h2>Conheça as novidades do HTML 5.2</h2>
+<div class="content" id="post">
+Em 14 de dezembro de 2017 o HTML 5.2 tornou-se uma recomendação oficial W3C (REC). Quando uma especificação entra no estágio REC, isto significa que ela já recebeu o endosso dos membros e do diretor do W3C, e assim o W3C oficialmente recomenda sua utilização por usuários, e sua implementação por autores de sites. <br><br>A partir do estágio REC, qualquer coisa nova deve ter no mínimo <a href="https://www.slideshare.net/rachelandrew/where-does-css-come-from/27?src=clipshare">2 implementações independentes</a>. Isto torna o momento perfeito para nós,  web developers, iniciarmos a implementação de qualquer nova funcionalidade.<br><br>No HTML 5.2, existe um certo número de adições e remoções, as quais podem serem vistas na <a href="https://www.w3.org/TR/html52/changes.html">página de alterações</a>. Neste artigo irei abordar algumas das alterações que julgo serem as mais relevantes para minhas tarefas de desenvolvimento.<br><h2>Novas funcionalidades</h2><h3><span id="result_box" class="" tabindex="-1" lang="pt"><span>Um elemento &lt;dialog&gt; nativo</span></span></h3><span id="result_box" class="" tabindex="-1" lang="pt"><span>De todas as mudanças no HTML 5.2, estou mais entusiasmado com a introdução do <a href="https://www.w3.org/TR/html52/interactive-elements.html#elementdef-dialog">elemento &lt;dialog&gt;</a>, uma caixa de diálogo modal nativa.</span> <span class="">As caixa de diálogo são bastante comuns na web, mas cada implementação é diferente de alguma forma.</span> <span class="">As caixas também são realmente difíceis de fazer de uma forma acessível, resultando que a maioria delas são praticamente inacessíveis para usuários que não navegam visualmente na web.</span><br><br><span class="">O novo elemento &lt;dialog&gt; pretende mudar isso, fornecendo uma maneira simples de incluir uma caixa de diálogo modal sem ter que se preocupar com muitas das armadilhas.</span> <span class="">Aqui estão os conceitos básicos.</span><br><br><span class="">O diálogo é criado usando um elemento &lt;dialog&gt;:<p class="well">&lt;dialog&gt;<br>  &lt;h2&gt;Titulo da caixa&lt;/h2&gt;<br>  &lt;p&gt;Corpo da mensagem.&lt;/p&gt;<br>&lt;/dialog&gt;</p>Por padrão, a caixa de diálogo está oculta da exibição (e do acesso DOM), a menos que o atributo aberto seja aplicado.<p class="well">&lt;dialog open&gt;<br></p></span></span><span id="result_box" class="" tabindex="-1" lang="pt"><span class="">O atributo open pode ser alternado ao chamar os métodos show() e close(), que estão disponíveis para qualquer HTMLDialogElement.</span></span><p class="well">&lt;button id="open"&gt;Abrir caixa&lt;/button&gt;
+&lt;button id="close"&gt;Fechar caixa&lt;/button&gt;
+
+&lt;dialog id="dialog"&gt;
+<span id="result_box" class="" tabindex="-1" lang="pt"><span class="">  &lt;h2&gt;Titulo da caixa&lt;/h2&gt;<br>  &lt;p&gt;Corpo da mensagem.&lt;/p&gt;</span></span>
+&lt;/dialog&gt;
+
+&lt;script&gt;
+const dialog = document.getElementById("dialog");
+
+document.getElementById("open").addEventListener("click", () =&gt; {
+  dialog.show();
+});
+
+document.getElementById("close").addEventListener("click", () =&gt; {
+  dialog.close();
+});
+&lt;/script&gt;<br></p><div align="center"><a href="../../images/cover/dialog.png" title="Ver o original">        <img src="../../images/400/dialog.png" alt="dialog.png">    </a></div><p>De acordo com o <a href="https://caniuse.com/#feat=dialog">caniuse.com</a> elemento &lt;dialog&gt; já possui suporte no Chrome e pode ser habilitado através de uma flag no Firefox.</p><h3><span id="result_box" class="" tabindex="-1" lang="pt"><span>Usando a API de solicitação de pagamento a partir de iframes</span></span></h3><span id="result_box" class="" tabindex="-1" lang="pt"><span>A <a href="https://www.w3.org/TR/payment-request/">API de Solicitação de Pagamento</a> é uma alternativa nativa aos formulários de pagamento.</span> <span>Ele pretende fornecer um método padronizado e consistente de fazer pagamentos na web para usuários, movendo o tratamento de recuperação de informações de pagamento para o navegador, em vez de formas de pagamento individuais em cada site.</span><br><br><span>Antes do HTML 5.2, esses pedidos de pagamento não podiam ser feitos a partir de iframes incorporados em um documento.</span> <span class="">Isso
+ tornou essencialmente impossível para que soluções de pagamento embutidas de terceiros (exemplo: Stripe, Paystack) utilizassem esta API, uma vez que sua interface de pagamento normalmente é tratada dentro de um iframe.</span><br><br><span class="">O HTML 5.2 introduziu o atributo allowpaymentrequest que, quando aplicado a um iframe, permitirá que ele use a API de solicitação de pagamento enquanto o usuário estiver na mesma página hospedada.<br><p class="well">&lt;iframe allowpaymentrequest&gt;</p></span></span><h3><span id="result_box" class="" tabindex="-1" lang="pt"><span class="">Tamanho dos ícones da Apple</span></span></h3><p><span id="result_box" class="" tabindex="-1" lang="pt"><span class="">Para definir ícones de páginas da web, usamos o elemento &lt;link rel = "icon"&gt; no header do nosso documento.</span> <span class="">Para definir diferentes tamanhos de ícones, usamos o atributo sizes.</span></span></p><p class="well">&lt;link rel="icon" sizes="16x16" href="path/to/icon16.png"&gt;  
+&lt;link rel="icon" sizes="32x32" href="path/to/icon32.png"&gt;</p>Este atributo, embora meramente consultivo, permite aos navegadores decidirem qual o tamanho de ícone que eles devem usar se vários tamanhos estiverem disponíveis, especialmente porque a maioria dos navegadores possuem seu próprio tamanho de ícone padrão.<br><br>Antes do HTML 5.2, o atributo sizes só era válido se a rel do link fosse icon. No entanto, os dispositivos iOS da Apple não suportam o atributo sizes. Para contornar isso, a Apple apresentou um rel específico do dispositivo, o ícone do apple-touch-icon, que poderia ser usado para definir o ícone usado em seus dispositivos.<br><br>No HTML 5.2, a especificação agora permite que o atributo sizes seja usado se o relacionamento for apple-touch-icon, não mais um icon. Isso nos permitirá fornecer diferentes tamanhos de ícones para diferentes dispositivos Apple. Embora, tanto quanto eu sei, os dispositivos Apple ainda não suportam o atributo sizes, essa mudança será útil para o futuro quando eles eventualmente o fizerem.<br><h2>Novas práticas agora são válidas</h2>Além de novos recursos, o HTML 5.2 validou algumas práticas na escrita de HTML que anteriormente eram inválidas.<br><h3>Múltiplos elementos &lt;main&gt;</h3>O elemento &lt;main&gt; representa o conteúdo principal de uma página da web. Enquanto o conteúdo repetido em várias páginas pode ser colocado em headers, sections ou qualquer outro elemento, o elemento &lt;main&gt; é reservado para o conteúdo específico e exclusivo da página específica. Consequentemente, antes do HTML 5.2, o elemento &lt;main&gt; precisava ser exclusivo dentro do DOM para que a página fosse válida.<br><br>Com a prevalência das SPAs (Single Page Aplications), no entanto, manter esta regra pode ser difícil. Pode haver casos em que existem vários elementos &lt;main&gt; no DOM, mas apenas um é mostrado ao usuário em qualquer momento.<br><br>Com o HTML 5.2, agora podemos ter vários elementos &lt;main&gt; em nosso código HTML, desde que apenas um seja visível para o usuário em qualquer momento. Todos os elementos extras devem ser ocultos usando o atributo hidden.<br><p class="well">&lt;main&gt;...&lt;/main&gt;
+&lt;main hidden&gt;...&lt;/main&gt;
+&lt;main hidden&gt;...&lt;/main&gt;</p>Como sabemos, existem várias maneiras de ocultar um elemento com CSS. No entanto, quaisquer elementos adicionais &lt;main&gt; devem ser ocultos usando o atributo hidden. Qualquer outro método para ocultar o elemento (exemplo: display: none; ou visibility: hidden;) não será válido.<br><h3>Style no &lt;body&gt;</h3>Normalmente, o CSS inline definido usando o elemento &lt;style&gt; é colocado dentro do &lt;head&gt; do documento HTML. Com o aumento no desenvolvimento de componentes, os desenvolvedores viram o benefício de se escrever colocando styles junto com os elementos html para quais são relevantes.<br><br>No HTML 5.2, a definição de um bloco &lt;style&gt; inline, em qualquer lugar dentro do &lt;body&gt; de um documento HTML, agora é válida. Isso significa que podemos ter estilos mais próximos de onde eles são usados.<br><p class="well">&lt;body&gt;
+    &lt;p&gt;Paragrafo 1&lt;/p&gt;
+    &lt;style&gt;
+        p { color: red; }
+    &lt;/style&gt;
+    &lt;p&gt;Paragrafo 2&lt;/p&gt;
+&lt;/body&gt;</p>No entanto, ainda é observado que os styles deveriam, de preferência, ser colocados no &lt;head&gt;, por motivos de desempenho. De acordo com a especificação:<br><br><i>Um elemento de estilo deve preferencialmente ser usado no header do documento. O uso de estilo no body do documento pode causar restyling, <a href="https://csstriggers.com/">trigger layout</a> e / ou causar repainting e, portanto, deve ser usado com cuidado.</i><br><br>Também deve ser observado que, como mostrado no exemplo, os estilos não respeitam o escopo. Um estilo inline definido mais tarde no documento HTML ainda se aplicará aos elementos definidos antes dele, razão pela qual ele pode desencadear o repainting.<br><h3><span id="result_box" class="" tabindex="-1" lang="pt"><span>Cabeçalhos em uma &lt;legenda&gt;</span></span></h3><span id="result_box" class="" tabindex="-1" lang="pt"><span class="">Nos formulários, o elemento &lt;legend&gt; representa uma legenda para os campos de formulário dentro de um &lt;fieldset&gt;.</span> <span class="">Antes do HTML 5.2, o conteúdo de uma legenda tinha que ser plain text.</span> <span>Agora, podemos incluir elementos de cabeçalho.</span></span><p class="well">&lt;fieldset&gt;
+    &lt;legend&gt;&lt;h2&gt;elemento h2&lt;/h2&gt;&lt;/legend&gt;
+    &lt;!-- Form fields for basic information --&gt;
+&lt;/fieldset&gt;</p><span id="result_box" class="" tabindex="-1" lang="pt"><span>Isso é realmente útil para quando queremos usar o elemento fieldset para agrupar diferentes seções de um formulário. Em casos como este, faz todo o sentido usar cabeçalhos, o que tornaria essas seções de formulário mais facilmente navegáveis para usuários que dependem de um contorno de documento.<br></span></span><h2><span id="result_box" class="" tabindex="-1" lang="pt"><span>Recursos removidos</span></span></h2><span id="result_box" class="" tabindex="-1" lang="pt"><span>No HTML 5.2, alguns elementos foram removidos, a saber:<br></span></span><ul><li><span id="result_box" class="" tabindex="-1" lang="pt"><span>keygen: usado para ajudar a gerar chaves públicas para formulários</span></span></li><li><span id="result_box" class="" tabindex="-1" lang="pt"><span>menu e menuitem: usado para criar menus de navegação ou contexto</span></span></li></ul><h3>Nenhum children inline, flutuante ou em bloco de &lt;p&gt;<br></h3><p>No HTML 5.2, os únicos children válidos de um elemento &lt;p&gt; devem ser o conteúdo de frases. Isso significa que os seguintes tipos de elementos não devem mais ser aninhados dentro de um parágrafo:<br></p><ul><li>Blocos inline</li><li>Tabelas inline</li><li>Blocos posicionados com float e position<br></li></ul><h3>Sem Documentos Esquisitos<br></h3><p>Finalmente, podemos dizer adeus aos seguintes tipos de documentos strict:</p><p class="well">&lt;!DOCTYPE&nbsp;HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "<span>http</span><span>://</span><span>www</span><span>.</span><span>w3</span><span>.</span><span>org</span><span>/</span><span>TR</span><span>/</span><span>html4</span><span>/</span><span>strict</span><span>.</span><span>dtd</span>"&gt;</p><p class="well">&lt;!DOCTYPE&nbsp;html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "<span>http</span><span>://</span><span>www</span><span>.</span><span>w3</span><span>.</span><span>org</span><span>/</span><span>TR</span><span>/</span><span>xhtml1</span><span>/</span><span>DTD</span><span>/</span><span>xhtml1</span><span>-</span><span>strict</span><span>.</span><span>dtd</span>"&gt;</p><h3>Fonte:</h3><ul><li><a href="https://bitsofco.de/whats-new-in-html-5-2/">bitsofco.de</a><br></li></ul>
+<p class="right"><small>17/Fev/2018 15:48:38</small></p>
+</div>
+<script>
+$( document ).ready(function() {
+    $("a.group").fancybox({
+        'cyclic'    :   true,
+        'titleShow' :   true
+    });
+});
+</script>
+</div>        </div>
+        <div class="r">
+            <div class="g12 center">
+                <small>O código fonte deste blog está no <a href="https://github.com/hackergaucho/blog">Github</a></small>
+            </div>
+        </div>
+    </div><!--.c-->
+</body>
+</html>

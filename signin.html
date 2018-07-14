@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/bower_components/1k/dist/1k.min.css">
+    <link rel="stylesheet" href="asset/css/main.css">
+    <link rel="stylesheet" href="asset/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+    <script src="asset/js/jquery1.4.min.js"></script>
+    <script src="asset/js/main.js"></script>
+    <script type="text/javascript" src="asset/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="feed/index.html" />
+    <meta property="og:site_name" content="Hacker Gaucho">
+    <meta property="og:title" content="Login">
+    <link rel="apple-touch-icon" href="file/logo180.png" sizes="180x180">
+    <link rel="icon" href="file/logo32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="file/logo16.png" sizes="16x16" type="image/png">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta name="twitter:title" content="Login" />
+    <meta property="fb:admins" content="100009221931867"/>
+    <meta property="og:url" content="https://hackergaucho.com.br">
+    <meta property="og:description" content="Notícias e artigos sobre T.I.">
+    <meta name="twitter:description" content="Notícias e artigos sobre T.I." />
+    <meta property="og:image" content="file/logo.png">
+    <meta name="twitter:image" content="file/logo.png" />
+</head>
+<body>
+    <div class="c">
+        <div class="r">
+            <div class="g12 center">
+                <a href="index.html"><h1>Hacker Gaucho</h1></a>
+            </div>
+        </div>
+        <div class="r">
+            <div class="g3 center">
+                <p><small class="hamburguer">
+                    &#x2630; Menu
+                </small></p>
+                <script>
+                var hide=true;
+                function showMenu(){
+                    if(hide){
+                        hide=false;
+                        $('.hamburguer').html('X Menu');
+                    }else{
+                        hide=true;
+                        $('.hamburguer').html('&#x2630; Menu');
+                    }
+                    $('#menuPrincipal').toggle();
+                }
+                $('.hamburguer').click(function(){
+                    if($( document ).width()<1024){
+                        showMenu();
+                    }
+                });
+                </script>
+                <ul id="menuPrincipal" class="lista">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="feed.1">RSS</a></li>
+                    <li><a href="posts/O_satélite_GOES-13_encerra_suas_transmissões/4%3Fupdate.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="g9"><div class="r">
+    <div class="g3"></div>
+    <div class="g3">
+        <h2>Login</h2>
+                <form class="" action="posts/O_satélite_GOES-13_encerra_suas_transmissões/4%3Fupdate.html" method="post">
+            <label for="email">
+                Email            </label>
+            <input class="input-block" type="email" name="email" id="email" required>
+            <label for="password">
+                Senha            </label>
+            <input  class="input-block" type="password" name="password" id="password" required pattern=".{8,}" title="8 caracteres no mínimo">
+            <button type="submit">Entrar</button>
+            <script type="text/javascript">
+            /*FUNCTIONs*/
+            function defaultLabel(){
+                $("label[for='email']").html('Email');
+                $("label[for='password']").html('Senha');
+                $("#error").hide();
+            }
+            /*TRIGGERs*/
+            $('#email').on('focus',function(){
+                defaultLabel();
+            });
+            $('#password').on('focus',function(){
+                defaultLabel();
+            });
+            </script>
+        </form>
+    </div>
+    <div class="g3"></div>
+</div>
+
+</div>        </div>
+        <div class="r">
+            <div class="g12 center">
+                <small>O código fonte deste blog está no <a href="https://github.com/hackergaucho/blog">Github</a></small>
+            </div>
+        </div>
+    </div><!--.c-->
+</body>
+</html>

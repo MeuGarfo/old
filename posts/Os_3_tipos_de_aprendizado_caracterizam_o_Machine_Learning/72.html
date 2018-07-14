@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Os 3 tipos de aprendizado caracterizam o Machine Learning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../asset/bower_components/1k/dist/1k.min.css">
+    <link rel="stylesheet" href="../../asset/css/main.css">
+    <link rel="stylesheet" href="../../asset/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+    <script src="../../asset/js/jquery1.4.min.js"></script>
+    <script src="../../asset/js/main.js"></script>
+    <script type="text/javascript" src="../../asset/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="../../feed/index.html" />
+    <meta property="og:site_name" content="Hacker Gaucho">
+    <meta property="og:title" content="Os 3 tipos de aprendizado caracterizam o Machine Learning">
+    <link rel="apple-touch-icon" href="../../file/logo180.png" sizes="180x180">
+    <link rel="icon" href="../../file/logo32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../../file/logo16.png" sizes="16x16" type="image/png">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta name="twitter:title" content="Os 3 tipos de aprendizado caracterizam o Machine Learning" />
+    <meta property="fb:admins" content="100009221931867"/>
+    <meta property="og:url" content="https://hackergaucho.com.br/posts/Os_3_tipos_de_aprendizado_caracterizam_o_Machine_Learning/72">
+    <meta property="og:description" content="Os 3 tipos de aprendizado caracterizam o Machine Learning">
+    <meta name="twitter:description" content="Os 3 tipos de aprendizado caracterizam o Machine Learning" />
+    <meta property="og:image" content="https://hackergaucho.com.br/images/cover/ia.jpg">
+    <meta name="twitter:image" content="https://hackergaucho.com.br/images/cover/ia.jpg" />
+</head>
+<body>
+    <div class="c">
+        <div class="r">
+            <div class="g12 center">
+                <a href="../../index.html"><h1>Hacker Gaucho</h1></a>
+            </div>
+        </div>
+        <div class="r">
+            <div class="g3 center">
+                <p><small class="hamburguer">
+                    &#x2630; Menu
+                </small></p>
+                <script>
+                var hide=true;
+                function showMenu(){
+                    if(hide){
+                        hide=false;
+                        $('.hamburguer').html('X Menu');
+                    }else{
+                        hide=true;
+                        $('.hamburguer').html('&#x2630; Menu');
+                    }
+                    $('#menuPrincipal').toggle();
+                }
+                $('.hamburguer').click(function(){
+                    if($( document ).width()<1024){
+                        showMenu();
+                    }
+                });
+                </script>
+                <ul id="menuPrincipal" class="lista">
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="../../feed.1">RSS</a></li>
+                    <li><a href="../O_satélite_GOES-13_encerra_suas_transmissões/4%3Fupdate.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="g6"><p><small>22/Mai/2018 20:46:28</small></p>
+<h2>Os 3 tipos de aprendizado caracterizam o Machine Learning</h2>
+<div class="content" id="post">
+<div class="center">    <a class="group" rel="group" href="../../images/cover/ia.jpg" title="3 tipos de aprendizado caracterizam o Machine Learning">        <img src="../../images/560/ia.jpg" alt="3 tipos de aprendizado caracterizam o Machine Learning">    </a><br>    <small>3 tipos de aprendizado caracterizam o Machine Learning</small></div>Existem três principais categorias: aprendizagem supervisionada, não supervisionada e por reforço.<br><h3 align="center">Aprendizagem Supervisionada</h3><div class="center">    <a class="group" rel="group" href="../../images/cover/ml1.png" title="Aprendizagem Supervisionada">        <img src="../../images/560/ml1.png" alt="Aprendizagem Supervisionada">    </a><br>    <small>Aprendizagem Supervisionada</small></div>Imagine um programa que usa Machine Learning para identificar fotos de cachorros. Vou usar dois dados de entrada para treiná-lo:<br><ul><li>Imagem: fotos variadas, algumas de cachorros, e outras não.</li><li>Boolean: um boolean que indica se a foto é ou não de um cachorro.</li></ul>O treinamento ocorre quando o programa "vê" uma imagem junto com sua resposta, ou seja, esta imagem é de um cachorro? Imagine isto se repetindo para milhares de imagens diferentes. Chega um momento em que o programa identifica as características que fazem uma imagem ser a imagem de um cachorro.<br><br>Esta é a aprendizagem supervisionada: dizemos ao computador o que é cada entrada (qual o label) e ele aprende quais características daquelas entradas fazem elas serem o que são.<br><br>De acordo com o tipo de resultado do algoritmo, podemos classificá-lo entre algoritmo de classificação ou algoritmo de regressão.<br><br>O exemplo anterior é um exemplo de classificação. Estamos classificando uma entrada entre dois tipos possíveis: cachorro ou não-cachorro.<br><br>Já a regressão ocorre quando o resultado é numérico. Por exemplo, um programa que calcula o valor que uma casa deveria ter com base em características como número de quartos, localização e ano de construção. Com base em exemplos de casas similares, o computador aprende a precificar novas casas.<br><h3 align="center">Aprendizagem Não Supervisionada</h3><div class="center">    <a class="group" rel="group" href="../../images/cover/ml2.png" title="Aprendizagem Não Supervisionada">        <img src="../../images/560/ml2.png" alt="Aprendizagem Não Supervisionada">    </a><br>    <small>Aprendizagem Não Supervisionada</small></div>Nos três tipos de aprendizagem existe a semelhança do computador aprender a inferir algo com base em suas experiências passadas. A diferença da aprendizagem não supervisionada para a supervisionada é que aqui a aprendizagem ocorre com dados não rotulados, ou seja, não dizemos ao computador o que é aquela entrada.<br><br>Por exemplo, vamos imaginar uma distribuidora que quer classificar seus clientes em categorias. Ela cria um programa que usa aprendizagem não supervisionada para fazer isto. Ou seja, ela ensina a separar os dados em grupos semelhantes, sem dizer o que são estes grupos. Um possível resultado é um grupo de clientes que compram produtos frescos, e outro com clientes que compram produtos industrializados, por exemplo.<br><br>Da mesma forma com a classificação de imagens. Temos um modelo que aprendeu a classificar imagens entre dois grupos distintos. Ao receber uma nova imagem, com base em seus atributos, ele identifica a qual grupo ela pertence. Sem necessariamente saber o que é aquele grupo.<br><h3 align="center">Aprendizagem Por Reforço</h3><div class="center">    <a class="group" rel="group" href="../../images/cover/ml3.jpg" title="Aprendizagem Por Reforço">        <img src="../../images/560/ml3.jpg" alt="Aprendizagem Por Reforço">    </a><br>    <small>Aprendizagem Por Reforço</small></div>A terceira classificação é a aprendizagem por reforço. Imagine criar um programa responsável por dirigir um veículo autônomo. Ele deve aprender a dirigir pelas ruas e transportar seus passageiros. Existem diversas formas de otimizar esta tarefa. Por exemplo, chegar ao destino no menor tempo possível e não causar nenhum acidente. Queremos que ele saiba o que fazer conforme o que ocorre à sua volta, e preferimos que ele demore um pouco mais do que causar um acidente, por exemplo. A aprendizagem por reforço é uma forma de ensinar ao computador qual ação priorizar dada uma determinada situação.<br><br>É possível vincular recompensas e punições aos possíveis resultados e, ponderando-as da forma certa, ensinar o nível de prioridade de cada meta. Neste exemplo, posso atribuir uma punição muito maior em caso de um acidente em comparação a se atrasar poucos minutos. Desta forma se ensina quais ações o computador deve priorizar.<br><br>Existem muitos detalhes que não foram cobertos por este artigo, porque a ideia foi iniciar o assunto para que possamos entender um pouco do que é Machine Learning e como é implementar programas que utilizam este recurso.<br><br><div>Além de conhecer as técnicas para criar programas que usam Machine Learning, é preciso também prestar atenção aos dados que serão utilizados para treinar estes programas. Grande parte do sucesso de um modelo vem da qualidade desses dados. É possível tratá-los utilizando técnicas de Analytics.</div><div><h3>Leia também:</h3><div><ul><li><a href="../Pesquisadores_criaram_uma_IA_que_sabe_programar_em_Java/60.html">Pesquisadores criaram uma IA que sabe programar em Java</a></li><li><a href="../MIT_cria_aparelho_portátil_que_lê_o_que_você_está_pensando/50.html">MIT cria aparelho portátil que lê o que você está pensando</a></li><li><a href="../Como_colorir_seus_desenhos_usando_inteligência_artificial/47.html">Como colorir seus desenhos usando inteligência artificial</a></li><li><a href="../As_3_Ondas_da_Inteligência_Artificial/10%3Fupdate.html">As 3 Ondas da Inteligência Artificial</a></li></ul></div></div><div><h3>Fonte:</h3></div><div><ul><li><a href="http://cio.com.br/tecnologia/2018/05/19/3-tipos-de-aprendizado-caracterizam-o-machine-learning/">CIO</a><br></li></ul></div>
+<p class="right"><small>22/Mai/2018 20:46:28</small></p>
+</div>
+<script>
+$( document ).ready(function() {
+    $("a.group").fancybox({
+        'cyclic'    :   true,
+        'titleShow' :   true
+    });
+});
+</script>
+</div>        </div>
+        <div class="r">
+            <div class="g12 center">
+                <small>O código fonte deste blog está no <a href="https://github.com/hackergaucho/blog">Github</a></small>
+            </div>
+        </div>
+    </div><!--.c-->
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>10 passos para o back-end</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../asset/bower_components/1k/dist/1k.min.css">
+    <link rel="stylesheet" href="../../asset/css/main.css">
+    <link rel="stylesheet" href="../../asset/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+    <script src="../../asset/js/jquery1.4.min.js"></script>
+    <script src="../../asset/js/main.js"></script>
+    <script type="text/javascript" src="../../asset/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="../../feed/index.html" />
+    <meta property="og:site_name" content="Hacker Gaucho">
+    <meta property="og:title" content="10 passos para o back-end">
+    <link rel="apple-touch-icon" href="../../file/logo180.png" sizes="180x180">
+    <link rel="icon" href="../../file/logo32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../../file/logo16.png" sizes="16x16" type="image/png">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta name="twitter:title" content="10 passos para o back-end" />
+    <meta property="fb:admins" content="100009221931867"/>
+    <meta property="og:url" content="https://hackergaucho.com.br/posts/10_passos_para_o_back-end/8">
+    <meta property="og:description" content="Algumas idéias do que fazer">
+    <meta name="twitter:description" content="Algumas idéias do que fazer" />
+    <meta property="og:image" content="https://hackergaucho.com.br/images/cover/back.jpg">
+    <meta name="twitter:image" content="https://hackergaucho.com.br/images/cover/back.jpg" />
+</head>
+<body>
+    <div class="c">
+        <div class="r">
+            <div class="g12 center">
+                <a href="../../index.html"><h1>Hacker Gaucho</h1></a>
+            </div>
+        </div>
+        <div class="r">
+            <div class="g3 center">
+                <p><small class="hamburguer">
+                    &#x2630; Menu
+                </small></p>
+                <script>
+                var hide=true;
+                function showMenu(){
+                    if(hide){
+                        hide=false;
+                        $('.hamburguer').html('X Menu');
+                    }else{
+                        hide=true;
+                        $('.hamburguer').html('&#x2630; Menu');
+                    }
+                    $('#menuPrincipal').toggle();
+                }
+                $('.hamburguer').click(function(){
+                    if($( document ).width()<1024){
+                        showMenu();
+                    }
+                });
+                </script>
+                <ul id="menuPrincipal" class="lista">
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="../../feed.1">RSS</a></li>
+                    <li><a href="../O_satélite_GOES-13_encerra_suas_transmissões/4%3Fupdate.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="g6"><p><small>16/Jan/2018 16:16:20</small></p>
+<h2>10 passos para o back-end</h2>
+<div class="content" id="post">
+<ol><li>Site estático simples</li><li>Blog estático com markdown</li><li><a href="https://github.com/aicoutos/guest">Guestbook simples com banco de dados</a></li><li><a href="https://github.com/aicoutos/auth">Área administrativa simples com banco de dados</a></li><li><a href="https://github.com/hackergaucho/blog">Blog dinâmico com painel de controle e editor WYSIWYG</a></li><li>Área administrativa com banco de dados e avatar</li><li>Rede social simples</li><li>Rede social com history api e ajax</li><li>Rede social com manipulação de áudio</li><li>Rede social com e manipulação de video</li></ol><h3>Leia também</h3><ul><li><a href="../5_dicas_básicas_para_o_back-end/9.html">5 dicas básica para o back-end</a><br></li></ul>
+<p class="right"><small>16/Jan/2018 16:16:20</small></p>
+</div>
+<script>
+$( document ).ready(function() {
+    $("a.group").fancybox({
+        'cyclic'    :   true,
+        'titleShow' :   true
+    });
+});
+</script>
+</div>        </div>
+        <div class="r">
+            <div class="g12 center">
+                <small>O código fonte deste blog está no <a href="https://github.com/hackergaucho/blog">Github</a></small>
+            </div>
+        </div>
+    </div><!--.c-->
+</body>
+</html>

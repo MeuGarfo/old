@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>A Segunda Onda da IA: Aprendizagem Estatística</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../asset/bower_components/1k/dist/1k.min.css">
+    <link rel="stylesheet" href="../../asset/css/main.css">
+    <link rel="stylesheet" href="../../asset/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+    <script src="../../asset/js/jquery1.4.min.js"></script>
+    <script src="../../asset/js/main.js"></script>
+    <script type="text/javascript" src="../../asset/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="../../feed/index.html" />
+    <meta property="og:site_name" content="Hacker Gaucho">
+    <meta property="og:title" content="A Segunda Onda da IA: Aprendizagem Estatística">
+    <link rel="apple-touch-icon" href="../../file/logo180.png" sizes="180x180">
+    <link rel="icon" href="../../file/logo32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../../file/logo16.png" sizes="16x16" type="image/png">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta name="twitter:title" content="A Segunda Onda da IA: Aprendizagem Estatística" />
+    <meta property="fb:admins" content="100009221931867"/>
+    <meta property="og:url" content="https://hackergaucho.com.br/posts/A_Segunda_Onda_da_IA:_Aprendizagem_Estatística/13">
+    <meta property="og:description" content="">
+    <meta name="twitter:description" content="" />
+    <meta property="og:image" content="https://hackergaucho.com.br/images/cover/onda2.png">
+    <meta name="twitter:image" content="https://hackergaucho.com.br/images/cover/onda2.png" />
+</head>
+<body>
+    <div class="c">
+        <div class="r">
+            <div class="g12 center">
+                <a href="../../index.html"><h1>Hacker Gaucho</h1></a>
+            </div>
+        </div>
+        <div class="r">
+            <div class="g3 center">
+                <p><small class="hamburguer">
+                    &#x2630; Menu
+                </small></p>
+                <script>
+                var hide=true;
+                function showMenu(){
+                    if(hide){
+                        hide=false;
+                        $('.hamburguer').html('X Menu');
+                    }else{
+                        hide=true;
+                        $('.hamburguer').html('&#x2630; Menu');
+                    }
+                    $('#menuPrincipal').toggle();
+                }
+                $('.hamburguer').click(function(){
+                    if($( document ).width()<1024){
+                        showMenu();
+                    }
+                });
+                </script>
+                <ul id="menuPrincipal" class="lista">
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="../../feed.1">RSS</a></li>
+                    <li><a href="../O_satélite_GOES-13_encerra_suas_transmissões/4%3Fupdate.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="g6"><p><small>23/Jan/2018 10:00:15</small></p>
+<h2>A Segunda Onda da IA: Aprendizagem Estatística</h2>
+<div class="content" id="post">
+No ano de 2004, a DARPA abriu seu <a href="https://en.wikipedia.org/wiki/DARPA_Grand_Challenge_(2004)">primeiro Grand Challenge</a> (Grande Desafio). Quinze veículos autônomos competiram para completar um percurso de 150 milhas (241,4 km) no deserto de Mojave. Os veículos basearam-se na primeira onda de IA - ou seja, uma IA baseada em regras - e imediatamente provou o quão limitado esta IA realmente é. Toda imagem gerada pela câmera do veículo, afinal, é um novo tipo de situação com a qual a IA precisa lidar!<br><br>Dizer que os veículos tiveram dificuldade em lidar com o curso seria generosidade. Eles não conseguiram distinguir entre diferentes formas escuras em imagens e não conseguiram descobrir se é uma pedra, um objeto distante ou apenas uma nuvem que obscurece o sol. <a href="http://www.cnn.com/2004/TECH/ptech/03/14/darpa.race/index.html">Como disse o gerente do programa do Grande Desafio</a>, alguns veículos - "tinham medo de sua própria sombra, alucinando com obstáculos quando não estavam lá".<br><div align="center">    <a href="../../images/cover/grand-challenge.jpg" title="Ver o original">        <img src="../../images/400/grand-challenge.jpg" alt="grand-challenge.jpg">    </a><br></div><div align="center"><i>O triste resultado do primeiro DARPA Grand Challenge</i><br></div><br>Nenhum dos grupos conseguiu completar o desafio inteiro, e até mesmo o veículo mais bem sucedido chegou até 12,4 milhas (19.9 km) na corrida. Foi um completo e absoluto fracasso - exatamente o tipo de pesquisa que DARPA adora financiar, com a esperança de que os insights e as lições tiradas desses primeiros experimentos levassem à criação de sistemas mais sofisticados no futuro.<br><br>E é exatamente assim que as coisas aconteceram.<br><br>Um ano depois, quando a DARPA abriu Grand Challenge 2005, cinco grupos chegaram com sucesso até o final da pista. Esses grupos dependeram da segunda onda de AI: aprendizado estatístico. O <a href="https://en.wikipedia.org/wiki/Stanley_(vehicle)">chefe de um dos grupos vencedores</a> foi imediatamente arrebatado pelo Google, por sinal, e se encarregou de desenvolver o carro autônomo do Google.<br><br>Nos sistemas de IA da segunda onda, os engenheiros e programadores não se preocupam com o ensino de regras precisas e exatas para os sistemas seguirem. Em vez disso, eles desenvolvem modelos estatísticos para certos tipos de problemas e, em seguida, "treinam" esses modelos em diferentes amostras para torná-los mais precisos e eficientes.<br><br>Os sistemas de aprendizagem estatística são altamente bem sucedidos na compreensão do mundo ao seu redor: eles podem distinguir entre duas pessoas diferentes ou entre diferentes vogais. Eles podem aprender e se adaptar a situações diferentes se estiverem devidamente treinados. No entanto, eles são limitados em sua capacidade lógica: eles não dependem de regras precisas, mas em vez disso, eles vão para as soluções que "funcionam bem o suficiente na maioria das vezes".<br><br>O garoto-propaganda dos sistemas de segunda onda é o conceito de redes neurais artificiais. Nas redes neurais artificiais, os dados passam por camadas computacionais, cada uma das quais processa os dados de uma maneira diferente e o transmite para o próximo nível. Ao treinar cada uma dessas camadas, bem como a rede completa, elas podem ser moldadas para produzir os resultados mais precisos. Muitas vezes, o treinamento exige que as redes analisem dezenas de milhares de fontes de dados para alcançar uma pequena melhoria. Mas geralmente, esse método fornece melhores resultados do que os obtidos pelos sistemas de primeira onda em determinados campos.<br><br>Até agora, os sistemas de segunda onda conseguiram ultrapassar os seres humanos no <a href="http://fortune.com/2015/03/17/google-facenet-artificial-intelligence/">reconhecimento facial</a>, na transcrição do discurso e na <a href="http://www.eetimes.com/document.asp?doc_id=1325712">identificação de animais e objetos em imagens</a>. Eles estão fazendo grandes avanços na <a href="https://qz.com/812317/microsoft-msft-claims-its-speech-transcription-ai-is-now-better-than-human-professionals/">tradução</a> e, se isso não for suficiente - eles estão começando a controlar<a href="http://spectrum.ieee.org/computing/embedded-systems/bringing-big-neural-networks-to-selfdriving-cars-smartphones-and-drones"> carros autônomos e drones aéreos</a>. O sucesso desses sistemas em tarefas tão complexas deixa os especialistas em IA horrorizados, e por uma ótima razão: não temos certeza de por que eles estão realmente funcionando.<br><br>O calcanhar de Aquiles dos sistemas de segunda onda é que ninguém sabe por que eles estão funcionando tão bem. Vemos redes neuronais artificiais ter sucesso em fazer as tarefas que são dadas, mas não entendemos como elas o fazem. Além disso, não está claro que exista uma metodologia - algum tipo de confiança nas regras básicas - por trás das redes neurais artificiais. Em alguns aspectos, eles são muito semelhantes aos nossos cérebros: podemos jogar uma bola no ar e prever onde ela vai cair, mesmo sem calcular as equações de movimento de Newton, ou mesmo estar ciente de sua existência.<br><br>Isso pode não soar como um grande problema à primeira vista. Afinal, as redes neurais artificiais parecem estar funcionando "bem o suficiente". Mas a Microsoft pode não concordar com essa avaliação. A empresa lançou um bot social no ano passado, na tentativa de imitar a escrita humana e fazer conversas leves com os jovens. O bot, <a href="https://www.wired.com/2016/03/fault-microsofts-teen-ai-turned-jerk/">batizado de "Tay"</a>, deveria reproduzir os padrões de fala de uma jovem feminina americana de 19 anos e conversar com os adolescentes usando suas gírias. A Microsoft imaginou que os jovens adorariam isso - e de fato eles adoraram. Muitos começaram a trolar a Tay: eles lhe falaram sobre seu grande sucesso, eles revelaram a ela que o ataque terrorista do 11 de setembro era um trabalho interno e explicaram em termos inequívocos que é proibida a entrada de imigrantes no Estados Unidos. E assim, algumas horas depois, Tay começou a aplicar seu conhecimento recém-descoberto, afirmando ao vivo no Twitter que Hitler era um homem bom, e realmente não fez nada de errado.<br><br><div align="center">    <a href="../../images/cover/tay.png" title="Ver o original">        <img src="../../images/400/tay.png" alt="tay.png">    </a><br></div><br>Esse foi o ponto em que os engenheiros da Microsoft desconectaram a Tay. Seu último tweet era que ela estava dando um tempo para refletir sobre as coisas. Até onde sabemos, ela ainda está pensando.<br><br>Este episódio expôs o desafio de causalidade que os engenheiros da IA enfrentam atualmente. Poderíamos prever bastante bem como os sistemas de primeira onda funcionariam sob certas condições. Mas, com os sistemas de segunda onda, não podemos mais facilmente identificar a causalidade do sistema - a maneira exata em que a entrada é convertida em saída e os dados que são usados para chegar a uma decisão.<br><br>Tudo isso não diz que as redes neurais artificiais e outros sistemas IA de segunda onda são inúteis. Longe disso. Mas é claro que, se não queremos que nossos sistemas de IA se excitem com o ditador nazista, algumas melhorias estão são necessárias. Devemos passar para a próxima e terceira onda de sistemas AI.<br><h3>Leia mais:</h3><ul><li><a href="../As_3_ondas_da_intelig�%2583ªncia_artificial/10.html">As 3 Ondas da Inteligência Artificial</a></li><li><a href="../A_Primeira_onda_da_IA:_Conhecimento_artesanal/12.html">A Primeira Onda da IA:  Conhecimento Artesanal</a></li><li>A Segunda Onda da IA: Aprendizagem Estatística<br></li><li><a href="../A_Terceira_Onda_da_IA:_Adapta�%2583§�%2583£o_Contextual/14.html">A Terceira Onda da IA: Adaptação Contextual</a></li></ul>
+<p class="right"><small>23/Jan/2018 10:00:15</small></p>
+</div>
+<script>
+$( document ).ready(function() {
+    $("a.group").fancybox({
+        'cyclic'    :   true,
+        'titleShow' :   true
+    });
+});
+</script>
+</div>        </div>
+        <div class="r">
+            <div class="g12 center">
+                <small>O código fonte deste blog está no <a href="https://github.com/hackergaucho/blog">Github</a></small>
+            </div>
+        </div>
+    </div><!--.c-->
+</body>
+</html>

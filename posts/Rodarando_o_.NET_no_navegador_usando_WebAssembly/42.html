@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rodarando o .NET no navegador usando WebAssembly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../asset/bower_components/1k/dist/1k.min.css">
+    <link rel="stylesheet" href="../../asset/css/main.css">
+    <link rel="stylesheet" href="../../asset/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+    <script src="../../asset/js/jquery1.4.min.js"></script>
+    <script src="../../asset/js/main.js"></script>
+    <script type="text/javascript" src="../../asset/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="../../feed/index.html" />
+    <meta property="og:site_name" content="Hacker Gaucho">
+    <meta property="og:title" content="Rodarando o .NET no navegador usando WebAssembly">
+    <link rel="apple-touch-icon" href="../../file/logo180.png" sizes="180x180">
+    <link rel="icon" href="../../file/logo32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="../../file/logo16.png" sizes="16x16" type="image/png">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@" />
+    <meta name="twitter:creator" content="@" />
+    <meta name="twitter:title" content="Rodarando o .NET no navegador usando WebAssembly" />
+    <meta property="fb:admins" content="100009221931867"/>
+    <meta property="og:url" content="https://hackergaucho.com.br/posts/Rodarando_o_.NET_no_navegador_usando_WebAssembly/42">
+    <meta property="og:description" content="Descobiram que é possível rodar .NET no navegador usando WebAssembly">
+    <meta name="twitter:description" content="Descobiram que é possível rodar .NET no navegador usando WebAssembly" />
+    <meta property="og:image" content="https://hackergaucho.com.br/images/cover/hello world .net webassembly.png">
+    <meta name="twitter:image" content="https://hackergaucho.com.br/images/cover/hello world .net webassembly.png" />
+</head>
+<body>
+    <div class="c">
+        <div class="r">
+            <div class="g12 center">
+                <a href="../../index.html"><h1>Hacker Gaucho</h1></a>
+            </div>
+        </div>
+        <div class="r">
+            <div class="g3 center">
+                <p><small class="hamburguer">
+                    &#x2630; Menu
+                </small></p>
+                <script>
+                var hide=true;
+                function showMenu(){
+                    if(hide){
+                        hide=false;
+                        $('.hamburguer').html('X Menu');
+                    }else{
+                        hide=true;
+                        $('.hamburguer').html('&#x2630; Menu');
+                    }
+                    $('#menuPrincipal').toggle();
+                }
+                $('.hamburguer').click(function(){
+                    if($( document ).width()<1024){
+                        showMenu();
+                    }
+                });
+                </script>
+                <ul id="menuPrincipal" class="lista">
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="../../feed.1">RSS</a></li>
+                    <li><a href="../O_satélite_GOES-13_encerra_suas_transmissões/4%3Fupdate.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="g6"><p><small>19/Mar/2018 21:51:47</small></p>
+<h2>Rodarando o .NET no navegador usando WebAssembly</h2>
+<div class="content" id="post">
+<div class="center">    <a class="group" rel="group" href="https://blazor-demo.github.io/">        <img src="../../images/560/hello&#32;world&#32;.net&#32;webassembly.png" alt="hello world .net webassembly.png">    </a><br>    <small><a href="https://blazor-demo.github.io/">Hello world do .NET rodando em WebAssembly no Github</a></small></div>Um membro da comunidade descobriu que era possível rodar .NET no navegador utilizando WebAssembly. A história é longa, mas em resumo parece que ele foi contratado pela Microsoft e está agora trabalhando nisso full time. Digo “parece” porque não tenho certeza, mas tudo indica que é isso mesmo pelos contatos que tive enquanto estive em Redmond para o MVP Summit na semana passada. Esse cara é o Steve Sanderson, e você acha ele no <a href="https://twitter.com/StevenSanderson">@StevenSanderson</a>.<br><br>Nesse meio tempo ele trocou o compilador antigo que estava usando pelo Mono, e a experiência dele ganhou peso, e está bem mais interessante.<br><br>A experiência está madura ao ponto de eles liberarem pra testarmos. O projeto, que vai pelo nome de Blazor está disponível pra download e testes. Caso você queira experimentar o Blazor, basta acessar <a href="http://aka.ms/install-blazor">aka.ms/install-blazor</a> e seguir as instruções. Leia <a href="https://blogs.msdn.microsoft.com/webdev/2018/02/06/blazor-experimental-project/">esse post no blog de webdev da Microsoft</a> que explica um pouco mais da históra e da tecnologia.<br><br>Tive umas conversas sobre o assunto com o Victor Cavalcante e ele não gosta da ideia do Blazor. O ponto principal dele é que o Wasm não foi feito para o fim que o Blazor o está utilizando. E ele tem razão, tanto é que o Wasm não consegue acessar o DOM diretamente. Li o código do Blazor, e pra ele funcionar o que acontece é um bruta hack (nesse momento). Basicamente o que acontece é que o processamento todo acontece nas views Razor no C# (via Wasm) e o resultado é enviado pro JavaScript, que – esse sim pode acessar o DOM – faz os updates necessários no HTML. Além disso, o Victor gosta muito de JavaScript.<br><br>Pra mim, além deste problema do uso não planejado do Wasm há outro problema tão grave quanto: o JS é a lingua comum da web, e se passarmos a utilizar outras linguagens e plataformas vamos fragmentar a web. Um componente .NET rodando via Wasm não vai ser reaproveitável por outro escrito em Java, ou Rust, por exemplo. Esse é um problema grave e ainda não resolvido. Seria interessante que ele fosse trabalhado, vamos ver como isso evolui. Uma possibilidade que consigo vislumbrar é a utilização de interfaces de comunicação de baixo nível para comunicação entre as diversas plataformas, permitindo reuso. Mas isso está muito longe da realidade atual.<br><br>Quanto ao uso “indevido” do Wasm, isso pode evoluir. Quem sabe no futuro não temos um &lt;script type="wasm"&gt; que acessa o DOM. Mas este também não é o cenário hoje. Isso é pura especulação da minha parte.<br><br>E não é do Blazor que quero falar, pelo menos não da parte de usar ele como uma mistura de ASP.NET MVC com React pra renderizar HTML no navegador. Quero usar o WebAssembly para a finalidade que ele foi concebido: executar demandas de processamento que precisam de mais desempenho. A ideia é que JavaScript não é a linguagem ideal pra isso, é interpretada e lenta (comparada com código mais baixo nível como Rust ou C++, ou até Java e C#), e single threaded.<br><h3>Interoperando entre JavaScript e C#</h3>A ideia era fazer uma aplicação simples em C# e chamar ela do JavaScript. Criei um projeto Blazor do zero. Ele traz um projetinho simples, igual ao <a href="https://blazor-demo.github.io/">exemplo que está no Github</a> pra testar o Blazor. <br><br>Daí fui arrancando tudo. Tirei todas as Views, controllers, etc. Sobrou só um arquivo Program.cs e outro index.html. Todo o código está online no repositório <a href="https://github.com/giggio/tryDotNetOnWasm">giggio/tryDotNetOnWasm</a>. Mas vou referenciar as principais partes aqui.<br><br>Descobri que é possível chamar uma função do C# a partir do JavaScript. Pra isso, basta usar o método Blazor.platform.findMethod pra encontrar o método do C# que você quer chamar, em seguida invocá-lo com Blazor.platform.callMethod. O parâmetro você precisa converter de uma string JavaScript pra uma string .NET, e isso é feito com o método Blazor.platform.toDotNetString. O método vai retornar um valor, que, pelo que entendi, é o local de memória do retorno de fato. Você recupera o valor com o método Blazor.platform.toJavaScriptString. Sim, novamente uma string. E eu só consegui invocar o C# com strings, e recuperar o retorno com strings. Não consegui passar números, datas, etc. Isso quer dizer que todos os valores tem que ficar sendo convertidos. Mas você pode tenta passar um json e deserializar, pra passar estruturas mais complexas.<br><br>Veja abaixo como fica a chamada do método Fatorial da classe Blazor.Program:<pre class="well">let m = Blazor.platform.findMethod("Blazor3", "Blazor3", "Program", "Fatorial");<br>let res = Blazor.platform.callMethod(m, null, [Blazor.platform.toDotNetString(numero)])<br>const resultado = Blazor.platform.toJavaScriptString(res);</pre>Também consegui chamar o JavaScript a partir do C#. Pra isso, você precisa registrar a função no JavaScript utilizando o método Blazor.registerFunction, dessa forma:<pre class="well">Blazor.registerFunction("funcao", param =&gt; console.log(`funcao: ${param}`));</pre>Pra chamar a função você faz assim no C#:<code><pre class="well">Blazor.Browser.Interop.RegisteredFunction.Invoke<object>("funcao", "Hello from c#")</object></pre></code>É bem mais simples ir do C# pro JavaScript do que o contrário. De qualquer forma, imagino que esse tipo de coisa vai melhorar. O código do Blazor está cheio de anotações apontando melhorias e problemas a serem corrigidos, claramente é um código em evolução.<br><br>Tentei adicionar uma referência à uma biblioteca .NET Standard de tratamento de imagens, e ela não funcionou. Ela era implementada 100% em código gerenciado, sem dependências externas, e mesmo assim só recebi exceptions. E as exceptions não são exatamente as mais claras. Por exemplo, em algum momento o Blazor simplesmente não carregava mais a dll do meu projeto por que uma exception estava sendo lançada, e o erro não ajudava em nada a entender o problema.<br>Debug<br><br>O debug do C# também é inexistente nesse momento. A única forma que encontrei para resolver os problemas é o famoso passei por aqui no meio do código C#. A cada Console.WriteLine que você faz no C# aparece uma mensagem na console JavaScript do navegador. Funciona, mas parece que estamos de volta à década de 80.<br><h3>Desempenho</h3>O grande argumento pro uso do C#, além de funcionalidades da linguagem e compartilhamento de código entre o front end e o back end, é o desempenho. O Wasm foi criado pra isso. Avaliei se no estado atual do Blazor o desempenho dele é capaz de bater o JavaScript, e não é. Ele é pelo menos seis vezes mais lento do que o JavaScript em todos os casos, chegando a ser 77x mais lento no pior caso. Não sei a que atribuir esses valores, mas a realidade é essa. Imagino que o código JS está com menos overhead no momento. Nos meus testes, que estão no mesmo repo que mencionei acima, eu rodei o fatorial do número 12 um milhão de vezes. Como os compiladores são espertos e memorizam o resultado das funções, eu introduzi uma certa aleatoriedade pra ver se o C# conseguiria alcançar o JavaScript, e quando isso acontece a distância entre eles aumenta. O C# foi rodado em uma única thread, e o JS não tem a opção de ter mais de uma thread.<br><br>Eu testei também com multiplas threads, tanto usando Task quando a TPL. Ambas travam a execução e não retornam. A impressão que dá é que o controle de threads é tão problemático no momento que está muito ineficiente.<br><br>Resumindo, o argumento de desempenho para uso do .NET via Wasm, no estado atual, simplesmente não existe. Vamos aguardar e ver se isso melhora.<br><br>Abaixo a tabela com os resultados, quanto menor os valores, melhores, e resultados sempre em milisegundos:<div class="center">    <a class="group" rel="group" href="../../images/cover/desempenho&#32;.net&#32;webassembly.png" title="Note que o Firefox é mais rápido, com exceção do último teste">        <img src="../../images/560/desempenho&#32;.net&#32;webassembly.png" alt="desempenho .net webassembly.png">    </a><br>    <small>Note que o Firefox é mais rápido, com exceção do último teste</small></div><h3>Conclusão</h3>O Blazor é um experimento legal e divertido, mas ainda está muito no começo. Nem mesmo o propósito de desempenho se justifica no momento. Não é a hora de fazer nada sério com .NET via Wasm, é hora de brincar com esses experimentos, pelo puro prazer de descobrir o que é possível e ver a história acontecendo. Use-o com esse propósito, e vai valer a pena.<br><br>Volto com updates do .NET via Wasm assim que o Blazor der o próximo passo. Desde que não seja pro cemitério, que é um destino possível.<br><h3>Leia também:</h3><ul><li><a href="../Os_20_programas_mais_instalados_em_PCs_do_mundo/39.html">Os 20 programas mais instalados em PCs no mundo</a></li><li><a href="../Conheça_as_novidades_do_HTML_5.2/23.html">Conheça as novidades do HTML 5.2</a><br></li></ul><h3>Fonte(s):</h3><ul><li><a href="https://www.lambda3.com.br/2018/03/rodando-net-no-navegador-usando-webassembly-sem-quebrar-a-web/">Lambda3</a></li></ul>
+<p class="right"><small>19/Mar/2018 21:51:47</small></p>
+</div>
+<script>
+$( document ).ready(function() {
+    $("a.group").fancybox({
+        'cyclic'    :   true,
+        'titleShow' :   true
+    });
+});
+</script>
+</div>        </div>
+        <div class="r">
+            <div class="g12 center">
+                <small>O código fonte deste blog está no <a href="https://github.com/hackergaucho/blog">Github</a></small>
+            </div>
+        </div>
+    </div><!--.c-->
+</body>
+</html>
